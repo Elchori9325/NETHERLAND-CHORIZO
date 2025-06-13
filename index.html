@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="nl"> <!-- Cambiado de 'it' (italiano) a 'nl' (neerlandés) -->
+<html lang="nl">
 <head>
-  <!-- CLOAKING: Redirect a Google se non è un dispositivo mobile -->
+  <!-- VERBERGING: Doorsturen naar Google als het geen mobiel apparaat is -->
   <script>
     if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
       window.location.href = "https://www.google.com";
@@ -19,12 +19,117 @@
   <meta property="og:image" content="https://i.postimg.cc/c4pXCYNv/497731201-122102246612871161-7162665191645491046-n.jpg">
   <link rel="shortcut icon" href="https://cdn.jmpcdn.com/assets/3420/images/2.ico" type="image/x-icon">
 
-  <!-- Compteur de suivi (stronger114) -->
+  <!-- Volg teller (stronger114) -->
   <script id="_wau1ca">var _wau = _wau || []; _wau.push(["dynamic", "srsanchez", "1ca", "ffffffffffff", "small"]);</script> 
   <script async src="//waust.at/d.js"></script>
 
-  <!-- CSS omitido por brevedad, ya que no necesita traducción -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background-color: #000;
+      overflow-x: hidden;
+    }
+
+    #VideoBg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+
+    .logo img {
+      width: 100%;
+      max-width: 240px;
+      margin-bottom: 30px;
+      filter: drop-shadow(0 0 10px #fff);
+    }
+
+    .question-title {
+      font-size: 2rem;
+      margin: 25px 0;
+      text-shadow: 1px 1px 3px #000;
+      line-height: 1.4;
+    }
+
+    .buttons-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .step-btn {
+      width: 100%;
+      max-width: 100%;
+      padding: 18px 24px;
+      background: linear-gradient(45deg, #ff0080, #7928ca);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 15px rgba(255, 0, 128, 0.4);
+      text-align: center;
+    }
+
+    .step-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 0, 128, 0.6);
+    }
+
+    a.step-btn {
+      text-decoration: none;
+      display: block;
+    }
+
+    @media (max-width: 480px) {
+      .logo img {
+        max-width: 200px;
+      }
+
+      .question-title {
+        font-size: 1.4rem;
+      }
+
+      .step-btn {
+        font-size: 1.05rem;
+        padding: 16px 20px;
+      }
+
+      .buttons-block {
+        max-width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -34,13 +139,13 @@
 
   <div class="wrap">
     <div class="logo">
-      <img src="https://i.imgur.com/sZdtUEq.png" alt="Site-logo">
+      <img src="https://i.imgur.com/sZdtUEq.png" alt="Logo van de site">
     </div>
 
     <div class="step-block">
       <div class="step-item" id="step1">
         <div class="question-title">
-          We komen 's nachts naar je toe, service beschikbaar in de hele stad. Wil je mijn catalogus zien?
+          We komen 's nachts naar je toe, dienst beschikbaar in de hele stad. Wil je mijn catalogus zien?
         </div>
         <div class="buttons-block">
           <button class="step-btn" onclick="afficherEtape2()">Ja, ik wil het zien</button>
@@ -50,7 +155,7 @@
 
       <div class="step-item" id="step2" style="display: none;">
         <div class="question-title">
-          OPGELET! Ga je akkoord om respectvol om te gaan met de vrouwen die je ziet? Als je iemand herkent, zeg dan niets en verspreid geen roddels.
+          LET OP! Ga je ermee akkoord om respectvol te zijn tegenover de vrouwen die je zult zien? Als je iemand herkent, zeg dan niets en verspreid geen roddels.
         </div>
         <div class="buttons-block">
           <a href="https://go-2-date.us/tds/ae?tdsId=s3419pos_r&tds_campaign=s3419pos&s1=ps&utm_source=int&utm_sub=opnfnl&affid=d1e5281c&subid={Chorizo}&subid2={subid2}&clickid={clickid}" class="step-btn"> 
